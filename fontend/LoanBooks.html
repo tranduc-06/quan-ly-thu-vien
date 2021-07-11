@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/js/bootstrap.js">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="root">
+        <div class="sidebar">
+            <div class="sidebar-wrapper">
+        
+                <nav class="logo">
+                    <h1>MiniLibrary</h1>
+                    <!-- <img src="images/logo/logo.png" alt=""> -->
+                </nav>
+
+                <nav class="navbar-main">
+                    <ul class="navbar-menu">
+                        <li class="navbar-item sidebar-lib">
+                            <a href="index.html"  title="Cá nhân">
+                                <i class="icon bi bi-book"></i>
+                                <span>Quản lý sách</span>
+                            </a> 
+                        </li>
+                        <li class="navbar-item active">
+                            <a href="LoanBooks.html"  title="Khám phá">
+                                <i class="icon bi bi-collection"></i>
+                                <span>Quản lý mượn sách</span>
+                            </a> 
+                        </li>
+                    </ul> 
+                </nav>
+            </div>
+        </div>
+        <header class="header">
+            <div class="level">
+                <div class="level-left">
+                    <button class="btn disabled button" tabindex="0"><i class="icon bi-arrow-left"></i></button>
+                    <button class="btn disabled button" tabindex="0"><i class="icon bi-arrow-right"></i></button>
+                    <form class="search">
+                        <div class="search-container">
+                            <button class="btn button" tabindex="0"><i class="icon bi-search"></i></button>
+                            <div class="input-wrapper">
+                                <input type="text" class="form-control z-input-placeholder" placeholder="Nhập tên sách, tác giả hoặc nội dung,..." value="">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="level-right">
+                    <div class="setting-item">
+                        <button class="btn button" tabindex="0">
+                            <i class="icon bi bi-sort-alpha-down"></i>
+                        </button>
+                    </div>
+                    <span>
+                        <div class="setting-item btn-upload">
+                            <a class="btn button" tabindex="0">
+                                <i class="icon bi-plus-circle"></i>
+                            </a>
+                        </div>
+                    </span>
+                    <div class="setting-item">
+                        <button class="btn button" tabindex="0">
+                            <i class="icon bi bi-gear"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="box mainpage">
+            <div style="position: relative;overflow: hidden;width: 100%;height: 100%;">
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

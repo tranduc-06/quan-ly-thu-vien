@@ -1,0 +1,5 @@
+
+window[window["TiktokAnalyticsObject"]].instance("C365K67G09F9P5I8UA50").setAdvancedMatchingAvailableProperties({"email":false,"phone_number":false});
+window[window["TiktokAnalyticsObject"]].instance("C365K67G09F9P5I8UA50").setPixelInfo && window[window["TiktokAnalyticsObject"]].instance("C365K67G09F9P5I8UA50").setPixelInfo({status: 0, name: "Pixel Test", advertiserID: "6975038943041454081", setupMode: 2, partner: ""});
+window[window["TiktokAnalyticsObject"]].setPCMDomain && window[window["TiktokAnalyticsObject"]].setPCMDomain("fahasa.com");
+window[window["TiktokAnalyticsObject"]].setPCMConfig && window[window["TiktokAnalyticsObject"]].setPCMConfig([]);
