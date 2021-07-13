@@ -1,0 +1,15 @@
+.book-info-container {
+    margin-top: 80px !important;
+    margin-left: 400px;
+    width: calc(100% - 400px);
+    height: 500px;
+    overflow: hidden scroll;
+}
+.book-info-container .book-name{
+    /* padding-left: -40px;
+    padding-right: 20px; */
+    width: 100%;
+    text-align: left;
+    margin-left: 20px;
+
+}

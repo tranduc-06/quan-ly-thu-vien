@@ -1,0 +1,340 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/js/bootstrap.js">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="root">
+        <div class="sidebar">
+            <div class="sidebar-wrapper">
+        
+                <nav class="logo">
+                    <h1>MiniLibrary</h1>
+                    <!-- <img src="images/logo/logo.png" alt=""> -->
+                </nav>
+
+                <nav class="navbar-main">
+                    <ul class="navbar-menu">
+                        <li class="navbar-item sidebar-lib">
+                            <a href="index.html"  title="Cá nhân">
+                                <i class="icon bi bi-book"></i>
+                                <span>Quản lý sách</span>
+                            </a> 
+                        </li>
+                        <li class="navbar-item sidebar-lib">
+                            <a href="BorrowBooks.html"  title="Khám phá">
+                                <i class="icon bi bi-collection"></i>
+                                <span>Quản lý mượn sách</span>
+                            </a> 
+                        </li>
+                        <li class="navbar-item activee">
+                            <a href="BorrowBooks.html"  title="Khám phá">
+                                <i class="icon bi bi-person-lines-fill"></i>
+                                <span>Quản lý tài khoản</span>
+                            </a> 
+                        </li>
+                    </ul> 
+                </nav>
+            </div>
+        </div>
+        <header class="header">
+            <div class="level">
+                <div class="level-left">
+                    <button class="mybtn disabled button" tabindex="0"><i class="icon bi-arrow-left"></i></button>
+                    <button class="mybtn disabled button" tabindex="0"><i class="icon bi-arrow-right"></i></button>
+                    <form class="search">
+                        <div class="search-container">
+                            <button class="mybtn button" tabindex="0"><i class="icon bi-search"></i></button>
+                            <div class="input-wrapper">
+                                <input type="text" class="form-control z-input-placeholder" placeholder="Nhập tên sách, tác giả hoặc nội dung,..." value="">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="level-right">
+                    <div class="setting-item">
+                        <button class="mybtn button" tabindex="0">
+                            <i class="icon bi bi-sort-alpha-down"></i>
+                        </button>
+                    </div>
+                    <span>
+                        <div class="setting-item btn-upload">
+                            <a class="mybtn button" tabindex="0">
+                                <i class="icon bi-plus-circle"></i>
+                            </a>
+                        </div>
+                    </span>
+                    <div class="setting-item">
+                        <button class="mybtn button" tabindex="0">
+                            <i class="icon bi bi-gear"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="box mainpage">
+            <div class="mainpage_table" id="scroll">
+                <div class="form_table" id="tablescroll">
+                    <table class="table">
+                        <thead class="borrow_book_thead">
+                            <tr class="tr">
+                                <th class="memberId">id</th>
+                                <th class="fullname">Họ tên</th>
+                                <th class="email">Email</th>
+                                <th class="phone">Số điện thoại</th>
+                                <th class="address">Địa chỉ</th>
+                                <th class="join_date">Ngày tham gia</th>
+                                <th class="action"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="accountManagement_tbody">
+                            <tr>
+                                <td>1</td>
+                                <td><a href="userprofile.html">Vũ Văn Thắng</a></td>
+                                <td>18021161@vnu.edu.vn</td>
+                                <td>0394790219</td>
+                                <td>Ktx Ngoại Ngữ ĐHQG Hà Nội-số 1 Phạm Văn Đồng-Cầu Giấu-Hà Nội</td>
+                                <td>13/07/2021</td>
+                                <td>
+                                    <div class="price-label">
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                        <button type="button" class="btn btn-danger">Del</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a href="userprofile.html">Vũ Văn Thắng</a></td>
+                                <td>18021161@vnu.edu.vn</td>
+                                <td>0394790219</td>
+                                <td>Ktx Ngoại Ngữ ĐHQG Hà Nội-số 1 Phạm Văn Đồng-Cầu Giấu-Hà Nội</td>
+                                <td>13/07/2021</td>
+                                <td>
+                                    <div class="price-label">
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                        <button type="button" class="btn btn-danger">Del</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><a href="userprofile.html">Vũ Văn Thắng</a></td>
+                                <td>18021161@vnu.edu.vn</td>
+                                <td>0394790219</td>
+                                <td>Ktx Ngoại Ngữ ĐHQG Hà Nội-số 1 Phạm Văn Đồng-Cầu Giấu-Hà Nội</td>
+                                <td>13/07/2021</td>
+                                <td>
+                                    <div class="price-label">
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                        <button type="button" class="btn btn-danger">Del</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><a href="userprofile.html">Vũ Văn Thắng</a></td>
+                                <td>18021161@vnu.edu.vn</td>
+                                <td>0394790219</td>
+                                <td>Ktx Ngoại Ngữ ĐHQG Hà Nội-số 1 Phạm Văn Đồng-Cầu Giấu-Hà Nội</td>
+                                <td>13/07/2021</td>
+                                <td>
+                                    <div class="price-label">
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                        <button type="button" class="btn btn-danger">Del</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><a href="userprofile.html">Vũ Văn Thắng</a></td>
+                                <td>18021161@vnu.edu.vn</td>
+                                <td>0394790219</td>
+                                <td>Ktx Ngoại Ngữ ĐHQG Hà Nội-số 1 Phạm Văn Đồng-Cầu Giấu-Hà Nội</td>
+                                <td>13/07/2021</td>
+                                <td>
+                                    <div class="price-label">
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                        <button type="button" class="btn btn-danger">Del</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><a href="userprofile.html">Vũ Văn Thắng</a></td>
+                                <td>18021161@vnu.edu.vn</td>
+                                <td>0394790219</td>
+                                <td>Ktx Ngoại Ngữ ĐHQG Hà Nội-số 1 Phạm Văn Đồng-Cầu Giấu-Hà Nội</td>
+                                <td>13/07/2021</td>
+                                <td>
+                                    <div class="price-label">
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                        <button type="button" class="btn btn-danger">Del</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><a href="userprofile.html">Vũ Văn Thắng</a></td>
+                                <td>18021161@vnu.edu.vn</td>
+                                <td>0394790219</td>
+                                <td>Ktx Ngoại Ngữ ĐHQG Hà Nội-số 1 Phạm Văn Đồng-Cầu Giấu-Hà Nội</td>
+                                <td>13/07/2021</td>
+                                <td>
+                                    <div class="price-label">
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                        <button type="button" class="btn btn-danger">Del</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><a href="userprofile.html">Vũ Văn Thắng</a></td>
+                                <td>18021161@vnu.edu.vn</td>
+                                <td>0394790219</td>
+                                <td>Ktx Ngoại Ngữ ĐHQG Hà Nội-số 1 Phạm Văn Đồng-Cầu Giấu-Hà Nội</td>
+                                <td>13/07/2021</td>
+                                <td>
+                                    <div class="price-label">
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                        <button type="button" class="btn btn-danger">Del</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td><a href="userprofile.html">Vũ Văn Thắng</a></td>
+                                <td>18021161@vnu.edu.vn</td>
+                                <td>0394790219</td>
+                                <td>Ktx Ngoại Ngữ ĐHQG Hà Nội-số 1 Phạm Văn Đồng-Cầu Giấu-Hà Nội</td>
+                                <td>13/07/2021</td>
+                                <td>
+                                    <div class="price-label">
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                        <button type="button" class="btn btn-danger">Del</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td><a href="userprofile.html">Vũ Văn Thắng</a></td>
+                                <td>18021161@vnu.edu.vn</td>
+                                <td>0394790219</td>
+                                <td>Ktx Ngoại Ngữ ĐHQG Hà Nội-số 1 Phạm Văn Đồng-Cầu Giấu-Hà Nội</td>
+                                <td>13/07/2021</td>
+                                <td>
+                                    <div class="price-label">
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                        <button type="button" class="btn btn-danger">Del</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td><a href="userprofile.html">Vũ Văn Thắng</a></td>
+                                <td>18021161@vnu.edu.vn</td>
+                                <td>0394790219</td>
+                                <td>Ktx Ngoại Ngữ ĐHQG Hà Nội-số 1 Phạm Văn Đồng-Cầu Giấu-Hà Nội</td>
+                                <td>13/07/2021</td>
+                                <td>
+                                    <div class="price-label">
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                        <button type="button" class="btn btn-danger">Del</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td><a href="userprofile.html">Vũ Văn Thắng</a></td>
+                                <td>18021161@vnu.edu.vn</td>
+                                <td>0394790219</td>
+                                <td>Ktx Ngoại Ngữ ĐHQG Hà Nội-số 1 Phạm Văn Đồng-Cầu Giấu-Hà Nội</td>
+                                <td>13/07/2021</td>
+                                <td>
+                                    <div class="price-label">
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                        <button type="button" class="btn btn-danger">Del</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item activee"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                </nav>
+                <div class="footer">
+                    <h3 class="title">
+                        <span>Thành Viên</span>
+                    </h3>
+                    <div class="myrow">
+                        <div class="member">
+                            <div class="info">
+                                <span>Vũ Văn Thắng</span>
+                                <p>email: 18021161@vnu.edu.vn</p>
+                                <p>phone: 0394790219</p>
+                                <p>facebook: fb.com/vuvanthangs</p>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <div class="info">
+                                <span>Nguyễn Tiến Dũng</span>
+                                <p>email: 18020373@vnu.edu.vn</p>
+                                <p>phone: ???</p>
+                                <p>facebook: ???</p>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <div class="info">
+                                <span>Đoàn Đức Dũng</span>
+                                <p>email: </p>
+                                <p>phone: </p>
+                                <p>facebook: </p>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <div class="info">
+                                <span>Trần Mạnh Đức</span>
+                                <p>email: </p>
+                                <p>phone: </p>
+                                <p>facebook: </p>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <div class="info">
+                                <span>Nguyễn Hồng Thái</span>
+                                <p>email: </p>
+                                <p>phone: </p>
+                                <p>facebook: </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

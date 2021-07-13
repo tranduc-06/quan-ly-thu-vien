@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/book_information.css">
-    <link rel="stylesheet" href="css/table.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="css/book-information-container.css">
-    <!-- <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/js/bootstrap.js">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <div id="root">
@@ -24,7 +22,7 @@
 
                 <nav class="navbar-main">
                     <ul class="navbar-menu">
-                        <li class="navbar-item activee">
+                        <li class="navbar-item sidebar-lib">
                             <a href="index.html"  title="Cá nhân">
                                 <i class="icon bi bi-book"></i>
                                 <span>Quản lý sách</span>
@@ -36,7 +34,7 @@
                                 <span>Quản lý mượn sách</span>
                             </a> 
                         </li>
-                        <li class="navbar-item sidebar-lib">
+                        <li class="navbar-item activee">
                             <a href="AccountManagement.html"  title="Khám phá">
                                 <i class="icon bi bi-person-lines-fill"></i>
                                 <span>Quản lý tài khoản</span>
@@ -82,60 +80,15 @@
             </div>
         </header>
         <div class="box mainpage">
-            <div class="book-info">
-                <div class="myslideshow-container">
-                    <div class="mySlides myfade">
-                        <img src="images/book_images/test.jpg" style="width:100% !important; height: 300px;">
-                    </div>
+            <div class="book-information">
+                <div class="book-images">
+
+                </div>
+                <div class="book-information-container">
                     
-                    <div class="mySlides myfade">
-                        <img src="images/book_images/1.jpg" style="width:100%; height: 300px;">
-                    </div>
-                    
-                    <div class="mySlides myfade">
-                        <img src="images/book_images/2.jpg" style="width:100%; height: 300px;">
-                    </div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                    <br>
-                </div>
-                <div class="image-map">
-                    <div class="images" onclick="currentSlide(1)">
-                        <a class="image">
-                            <img src="images/book_images/test.jpg" alt="xxx">
-                        </a> 
-                    </div>
-                    <div class="images" onclick="currentSlide(2)">
-                        <a class="image">
-                            <img src="images/book_images/1.jpg" alt="xxx">
-                        </a> 
-                    </div>
-                    <div class="images" onclick="currentSlide(3)">
-                        <a class="image">
-                            <img src="images/book_images/2.jpg" alt="xxx">
-                        </a> 
-                    </div>
-                </div>
-                <h2 class="book-name">
-                    Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm
-                </h2>
-                <div class="price-label">
-                    <button type="button" class="btn btn-success">Edit</button>
-                    <button type="button" class="btn btn-danger">Delete</button>
-                </div>
-            </div>
-            <div class="book-info-container" id="tablescroll">
-                <h5 class="book-name">
-                    Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm
-                </h5>
-                <div class="product-view-sa">
-                    <div class="product-view-sa_one">
-                        <div class="product-view-sa-supplier"></div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="js/slideshow.js"></script>
 </body>
 </html>

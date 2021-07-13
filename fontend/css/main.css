@@ -18,7 +18,7 @@ body{
     --sidebar-bg: hsla(0,0%,100%,0.05);
     position: relative;
     z-index: 100;
-    width: 20%;
+    width: 220px;
     background-color: #231B2E;
     height: 100%;
     float: left;
@@ -60,15 +60,15 @@ body{
     .sidebar .navbar-main .navbar-menu .sidebar-lib{ 
         border-left: 3px solid transparent;
     }
-    .sidebar .navbar-main .active{
+    .sidebar .navbar-main .activee{
         background-color: #393243;
         color: rebeccapurple !important;
         border-left: 3px solid purple;
     }
-    .sidebar .navbar-main .active a{
+    .sidebar .navbar-main .activee a{
         color: white !important;
     }
-    /* .sidebar .navbar-main .active a :hover{
+    /* .sidebar .navbar-main .activee a :hover{
         color: purple;
     } */
     /* .sidebar .navbar-main .navbar-menu .navbar-item{
@@ -83,7 +83,7 @@ body{
     .sidebar .navbar-main .navbar-menu .navbar-item :hover{ 
         color: #7C4AEF;
     }
-    .sidebar .navbar-main .navbar-menu .active :hover, .setting-item:hover{ 
+    .sidebar .navbar-main .navbar-menu .activee :hover, .setting-item:hover{ 
         color: #7C4AEF !important;
     }
 
@@ -123,7 +123,7 @@ ul {
     display: flex;
     align-items: center;
     position: fixed;
-    left: 20%;
+    left: 220px;
     top: 0;
     right: 0;
     height: 70px;
@@ -148,7 +148,7 @@ ul {
         align-items: center;
         justify-content: flex-start;
     }
-    .header .level-left .btn{
+    .header .level-left .mybtn{
         display: flex;
         align-items: center;
     }
@@ -160,7 +160,7 @@ ul {
         opacity: .3;
         cursor: none;
     }
-    .btn {
+    .mybtn {
         font-size: 14px;
         border-radius: 999px;
         line-height: normal;
@@ -172,7 +172,7 @@ ul {
         cursor: pointer;
         position: relative;
     }
-    .header .level-left .btn .icon{
+    .header .level-left .mybtn .icon{
         font-size: 24px;
         margin-right: 20px;
     }
@@ -184,7 +184,7 @@ ul {
         background-color: transparent;
         word-break: normal;
     }
-    .form-control:focus, .btn:focus{
+    .form-control:focus, .mybtn:focus{
         box-shadow: none !important;
     }
     .header .level-left .search {
@@ -256,7 +256,7 @@ ul {
         position: relative;
         margin-right: 10px;
     }
-    .header .level-right .setting-item>.btn {
+    .header .level-right .setting-item>.mybtn {
         width: 40px;
         height: 40px;
         display: flex;
@@ -266,11 +266,11 @@ ul {
         border-radius: 999px;
         
     }
-    .btn {
+    .mybtn {
         padding: 0px !important;
         border: none !important;
     }
-    .header .level-right .setting-item>.btn .icon {
+    .header .level-right .setting-item>.mybtn .icon {
         color: #A5A4A7 !important;
         font-size: 20px;
         margin-right: 0px;
@@ -279,7 +279,7 @@ ul {
 
 .mainpage{
     position: relative;
-    width: calc(100% - 20%);
+    width: calc(100% - 220px);
     background-color: #170F23;
     height: 100%;
     /* padding-left: 1px; */
@@ -287,6 +287,7 @@ ul {
     flex-grow: 1;
     /* min-height: 100%; */
     /* display: block; */
+    /* margin-right: 20px; */
 } 
     .girdslider-page-container{
         margin-top: 80px;
@@ -300,7 +301,7 @@ ul {
     }
 
     #scroll::-webkit-scrollbar {
-        width: 8px;
+        width: 0px;
         background-color: #170F23;
     } 
     #scroll::-webkit-scrollbar-thumb {
@@ -373,6 +374,10 @@ ul {
         height: 5rem;
         position: relative;
         margin-top: 4px;
+        text-align: center;
+    }
+    .item-inner .price-label .btn {
+        width: 80px !important;
     }
     .item-inner .price-label .price {
         font-size: 1.65rem !important;
@@ -384,7 +389,7 @@ ul {
     /* box-sizing: unset !important; */
 }
 
-.page-item.active .page-link {
+.page-item.activee .page-link {
     z-index: 3;
     color: #fff;
     background-color: #0A4AA2 !important;
