@@ -1,0 +1,142 @@
+﻿.add-dialog{
+    /* width: 100%;
+    height: 100%; */
+    z-index: 1000;
+    /* margin: 0;
+    padding: 0; */
+    background: rgba(248, 248, 248, 0.2);
+    position: fixed;
+    height: 550px !important;
+    overflow: hidden scroll;
+    
+}
+/* #dialog-scroll::-webkit-scrollbar {
+    width: 0px;
+    background-color: #170F23;
+} 
+#dialog-scroll::-webkit-scrollbar-thumb {
+    background-color: #929CB7;
+} */
+    .add-dialog .add-dialog-footer{
+        height: 45px;
+        text-align: right;
+        padding-right: 30px;
+        padding-top: 6px;
+    }
+    .ui-widget-content {
+        border: 1px solid #dddddd;
+        background: #ffffff;
+        color: #333333;
+        min-height: unset !important;
+        /* align-items: center !important; */
+    }
+    .add-dialog-body {
+        padding: 10px;
+        position: relative;
+        /* width: calc(100% - 220px); */
+        /* background-color: #170F23; */
+        height: 490px;
+        flex-grow: 1;
+        overflow: hidden;
+    }
+    .add-dialog-body .add-image {
+        width: 250px !important;
+        position: relative;
+        z-index: 999;
+    }
+    .btnAdd-image{
+        width: 100% !important;
+       height: 250px;
+    }
+    .btnAdd-image img{
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+    }
+    .add-filter{
+        position: absolute;
+        width: 100%;
+        background: rgba(248, 248, 248, 0.7);
+        height: 100%;
+        top: 0px;
+        color: white;
+    }
+    .add-icon{
+        position: relative;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        top: calc(50% - 15px);
+        font-size: 30px;
+        left: calc(50% - 15px);
+    }
+    .input-data{
+        overflow: hidden;
+        position: relative;
+        top: -250px;
+        left: 10px;
+        right: 10px;
+    }
+    .input-data .input-data-right {
+        margin-left: 250px;
+        width: 430px;
+        height: 250px;
+    }
+    .input-group {
+        display: unset !important;
+        width: 210px !important;
+    }
+    .input-group .input-group-prepend {
+        width: auto !important;
+        max-width: 120px;
+    }
+    .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+        margin-left: 0px !important;
+        width: calc(100% - 10px) !important;
+        /* margin-bottom: 10px !important; */
+    }
+    .my-input {
+        /* height: 2em !important; */
+        width: 100px !important;
+    }
+    .m-row {
+        display: inline;
+    }
+    .m-left-col {
+        float: left !important;
+    }
+    .m-right-col {
+        float: right !important;
+    }
+
+    .ui-dialog .ui-dialog-content {
+        overflow: hidden scroll !important;
+    }
+    .ui-dialog-content::-webkit-scrollbar {
+        width: 0px;
+        background-color: #170F23;
+    } 
+    .ui-dialog-content::-webkit-scrollbar-thumb {
+        background-color: #929CB7;
+    }
+
+    .my-input {
+        color: black !important;
+    }
+    
+
+    .input-data .input-bottom {
+        width: 100%;
+        height: 100%;
+        /* background-color: red; */
+    }
+    .m-row-bottom {
+        width: 100% !important;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0,1fr));
+    }
+    .description {
+        min-height: 100px !important;
+        max-height: 100px !important;
+    }

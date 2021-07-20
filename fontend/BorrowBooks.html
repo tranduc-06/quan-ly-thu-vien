@@ -4,11 +4,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/sort_dialog.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/js/bootstrap.js">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
     <div id="root">
@@ -16,26 +17,26 @@
             <div class="sidebar-wrapper">
         
                 <nav class="logo">
-                    <h1>MiniLibrary</h1>
+                    <h1><a href="admin.html" >MiniLibrary</a></h1>
                     <!-- <img src="images/logo/logo.png" alt=""> -->
                 </nav>
 
                 <nav class="navbar-main">
                     <ul class="navbar-menu">
                         <li class="navbar-item sidebar-lib">
-                            <a href="index.html"  title="Cá nhân">
+                            <a href="admin.html"  title="Quản lý sách">
                                 <i class="icon bi bi-book"></i>
                                 <span>Quản lý sách</span>
                             </a> 
                         </li>
                         <li class="navbar-item activee">
-                            <a href="BorrowBooks.html"  title="Khám phá">
+                            <a href="BorrowBooks.html"  title="Quản lý mượn sách">
                                 <i class="icon bi bi-collection"></i>
                                 <span>Quản lý mượn sách</span>
                             </a> 
                         </li>
                         <li class="navbar-item sidebar-lib">
-                            <a href="AccountManagement.html"  title="Khám phá">
+                            <a href="AccountManagement.html"  title="Quản lý tài khoản">
                                 <i class="icon bi bi-person-lines-fill"></i>
                                 <span>Quản lý tài khoản</span>
                             </a> 
@@ -60,9 +61,44 @@
                 </div>
                 <div class="level-right">
                     <div class="setting-item">
-                        <button class="mybtn button" tabindex="0">
+                        <button class="mybtn button" id="btn" tabindex="0" title="Sắp xếp">
                             <i class="icon bi bi-sort-alpha-down"></i>
                         </button>
+                        <div class="menu menu-settings setting-header header-dropdown pad-t-0" id="dialog-menu" style="display: none;">
+                            <!-- <a href="">aadasf</a> -->
+                            <ul class="menu-list">
+                                <li>
+                                    <span>
+                                        <a href="">
+                                            <button class="zm-btn button">
+                                                <i class="icon bi bi-sort-alpha-down"></i>
+                                                <span>Sắp Xếp Theo Tên</span>
+                                            </button>
+                                        </a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="">
+                                            <button class="zm-btn button">
+                                                <i class="icon bi bi-sort-down"></i>
+                                                <span>Sắp Xếp Theo Ngày Mượn</span>
+                                            </button>
+                                        </a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="">
+                                            <button class="zm-btn button">
+                                                <i class="icon bi bi-sort-numeric-down"></i>
+                                                <span>SX Theo Số Ngày Mượn</span>
+                                            </button>
+                                        </a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <span>
                         <div class="setting-item btn-upload">
@@ -88,181 +124,18 @@
                                 <th class="fullname">Họ tên</th>
                                 <th class="borrow_book">Sách mượn</th>
                                 <th class="borrowed_date">Ngày mượn</th>
-                                <th class="return_date">Ngày trả</th>
+                                <th class="return_date">Số Ngày Mượn</th>
+                                <th class="status">Trạng Thái</th>
                             </tr>
                         </thead>
                         <tbody class="borrow_book_tbody">
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Văn Thắng </a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
+                            <tr id="member">
+                                <td class="fullname" id="borrow-member"><a href="#">Vũ Văn Thắng </a></td>
+                                <td class="borrow_book"><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
+                                <td class="borrowed_date">13/07/2021</td>
+                                <td class="return_date">1</td>
+                                <td class="status"><button class="">Chưa Trả</button></td>
                             </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-                            <tr>
-                                <td><a href="userprofile.html">Vũ Nguyễn Văn Thắng</a></td>
-                                <td><a href="BookInformation.html">Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm</a></td>
-                                <td>13/07/2021</td>
-                                <td>23/07/2021</td>
-                            </tr>
-
                         </tbody>
                     </table>
                 </div>
@@ -335,5 +208,6 @@
 
         </div>
     </div>
+    <script src="js/sort_dialog.js"></script>
 </body>
 </html>

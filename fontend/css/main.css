@@ -44,7 +44,7 @@ body{
         display: flex;
         align-items: center;
     }
-    .sidebar .logo h1{
+    .sidebar .logo h1>a{
         color: aqua;
         font-size:x-large;
     }
@@ -179,7 +179,7 @@ ul {
     button, input, optgroup, select, textarea {
         padding: 0;
         border: none;
-        /* font: inherit; */
+        font: inherit;
         color: #D5D5D7 !important;
         background-color: transparent;
         word-break: normal;
@@ -376,7 +376,8 @@ ul {
         margin-top: 4px;
         text-align: center;
     }
-    .item-inner .price-label .btn {
+    /* .item-inner .price-label  */
+    .btn {
         width: 80px !important;
     }
     .item-inner .price-label .price {
@@ -430,4 +431,8 @@ ul {
     .info p{
         text-align: left;
         font-size: 12px !important;
+    }
+
+    a {
+        text-decoration: none !important;
     }

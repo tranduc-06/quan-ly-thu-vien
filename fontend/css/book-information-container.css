@@ -4,12 +4,57 @@
     width: calc(100% - 400px);
     height: 500px;
     overflow: hidden scroll;
+    color: #D5D5D7;
 }
 .book-info-container .book-name{
     /* padding-left: -40px;
     padding-right: 20px; */
     width: 100%;
     text-align: left;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 
 }
+    .product-view-sa {
+        margin-bottom: 8px;
+        border-bottom: 1px solid #D5D5D7;
+        margin-right: 20px;
+        min-width: 300px;
+    }
+    .product-view-sa-supplier {
+        display: inline-block;
+        width: 60%;
+        padding-right: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .product-view-sa-Genres {
+        width: 60%;
+    }
+    .product-view-sa-supplier span:first-child, .product-view-sa-Genres span:first-child{
+        padding-right: 5px;
+    }
+    .product-view-sa-supplier a, .product-view-sa-Genres a{
+        color: #F39801;
+        font-weight: 600;
+        /* display:flex; */
+    }
+    .product-view-sa-author {
+        display: inline-block;
+        width: 39%;
+        padding-left: 15px;
+        /* border-left: 1px solid #c1c1c1; */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .product-view-sa-author span:first-child {
+        padding-right: 5px;
+    }
+    .product-view-sa-author span:nth-of-type(2), .product-view-sa-supplier span:nth-of-type(2){
+        font-weight: 600;
+    }
+    #product_tabs_description_contents {
+        line-height: 25px;
+        margin-right: 20px;
+    }

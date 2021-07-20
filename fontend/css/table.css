@@ -63,3 +63,6 @@
     #tablescroll::-webkit-scrollbar-thumb {
         background-color: #929CB7;
     }
+    .accountManagement_tbody .btn{
+        width: 60px !important;
+    }
