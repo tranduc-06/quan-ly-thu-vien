@@ -9,11 +9,23 @@ $(document).ready(function(){
         width: 700,
         modal: true,
     });
+    dialog1 = $(".add-member-dialog").dialog({
+        autoOpen: false,
+        width: 500,
+        // height: 500,
+        modal: true,
+    });
     $('#btnAdd').click(function () {
         dialog.dialog('open');
     });
+    $('#btn-edit-1,#btn-edit-2').click(function () {
+        dialog1.dialog('open');
+    });
     $('#add-dialog-cancel').click(function(){
         dialog.dialog('close')
+    })
+    $('#add-dialog-cancel').click(function(){
+        dialog1.dialog('close')
     })
     $("#btnAdd-image").hover(function(){
         $(".add-filter").toggle();

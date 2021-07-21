@@ -21,4 +21,21 @@ $(document).ready(function(){
         }
            
     });
+
+    // var hoverr = $(".borrow-member");
+    // var togglee = $(".member-info");
+    // for (var i = 0; i< hoverr.length;i++) {
+    //     hoverr[i].hover(function(){
+    //         togglee[i].toggle();
+    //     })
+    // }
+
+
+    $("#member .borrow-member").each(function(){
+        var id = $(this).attr('id');
+        var id_name = '#dialog-menu-'+id;
+        $(this).hover(function(){
+            $(id_name).toggle();
+        })
+    })
 });
